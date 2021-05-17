@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="A1_iOS_Saksham_C0801483" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1rO-E2-AKp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jze-1N-d93">
+                                <rect key="frame" x="304" y="752" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="C90-AB-qqf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="In9-x6-K3h"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Kje-IA-NxO"/>
+                                </constraints>
+                                <state key="normal" image="location-arrow"/>
+                                <connections>
+                                    <action selector="drawRoute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cdo-7S-kzq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZJ-Hh-XVg">
+                                <rect key="frame" x="309" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9BG-eZ-nxB"/>
+                                    <constraint firstAttribute="width" constant="50" id="L48-Oi-BrW"/>
+                                </constraints>
+                                <state key="normal" image="minus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomOutBtnAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EGl-Ul-IyN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEq-ox-7wz">
+                                <rect key="frame" x="364" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="evK-Tk-5su"/>
+                                    <constraint firstAttribute="width" constant="50" id="wVz-6V-ys4"/>
+                                </constraints>
+                                <state key="normal" image="plus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomInBtnAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XRA-Ka-qWP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vEq-ox-7wz" firstAttribute="leading" secondItem="jZJ-Hh-XVg" secondAttribute="trailing" constant="5" id="HPI-a6-drQ"/>
+                            <constraint firstItem="jZJ-Hh-XVg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L5p-Lw-Prk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jze-1N-d93" secondAttribute="bottom" constant="10" id="WB6-49-DcY"/>
+                            <constraint firstAttribute="trailing" secondItem="jze-1N-d93" secondAttribute="trailing" constant="10" id="Ys8-yd-NQm"/>
+                            <constraint firstAttribute="bottom" secondItem="1rO-E2-AKp" secondAttribute="bottom" id="Yui-yW-z2Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1rO-E2-AKp" secondAttribute="trailing" id="bht-BH-7cs"/>
+                            <constraint firstItem="1rO-E2-AKp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cx1-4y-IqN"/>
+                            <constraint firstItem="vEq-ox-7wz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fQc-wB-qa0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vEq-ox-7wz" secondAttribute="trailing" id="v3G-0l-BSR"/>
+                            <constraint firstItem="1rO-E2-AKp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xRd-h4-oU6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="directionBtn" destination="jze-1N-d93" id="5xk-UD-PbN"/>
+                        <outlet property="map" destination="1rO-E2-AKp" id="Agm-fr-HPU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="119"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location-arrow" width="100" height="100"/>
+        <image name="minus.magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="plus.magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
